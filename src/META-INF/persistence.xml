@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="reservaVuelosPU"
+		transaction-type="JTA">
+		<description>persistencia para manejar reserva vuelos</description>
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:jboss/datasources/reservaVuelosDS</jta-data-source>
+
+		<class>modelo.seguridad.Login</class>
+		<class>modelo.Aeropuerto</class>
+		<class>modelo.Avion</class>
+		<class>modelo.Ciudad</class>
+		<class>modelo.Clasificacioncabina</class>
+		<class>modelo.Cliente</class>
+		<class>modelo.Comprainternet</class>
+		<class>modelo.Dia</class>
+		<class>modelo.Factura</class>
+		<class>modelo.Hora</class>
+		<class>modelo.Horario</class>
+		<class>modelo.Itinerario</class>
+		<class>modelo.Oficina</class>
+		<class>modelo.PersonalAerolinea</class>
+		<class>modelo.Reserva</class>
+		<class>modelo.Ruta</class>
+		<class>modelo.Tarifa</class>
+		<class>modelo.Terminalaerea</class>
+		<class>modelo.Tipoasiento</class>
+		<class>modelo.Vuelo</class>
+
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<!--  
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/jpa" /> -->
+		</properties>
+
+	</persistence-unit>
+</persistence>
