@@ -30,6 +30,7 @@ public class ItinerarioTransient implements Serializable {
 
 	private Time  duracion;
 	private String tipoClase;
+	private Integer idCabina;
 	private String aerolinea;
 	
 	private Integer numAsientos;
@@ -224,6 +225,12 @@ public class ItinerarioTransient implements Serializable {
 	}
 	public void setTotalPagarTarifa(BigDecimal totalPagarTarifa) {
 		this.totalPagarTarifa = totalPagarTarifa;
+	}
+	public Integer getIdCabina() {
+		return idCabina;
+	}
+	public void setIdCabina(Integer idCabina) {
+		this.idCabina = idCabina;
 	}
 
 }
