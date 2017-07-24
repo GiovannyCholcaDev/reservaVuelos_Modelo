@@ -63,6 +63,9 @@ public class Reserva implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="ID_VUELO")
 	private Vuelo vuelo;
+	
+	/*@Column(name="ID_VUELO")
+	private int idVuelo;*/
 
 	public Reserva() {
 	}
@@ -185,4 +188,5 @@ public class Reserva implements Serializable {
 		this.vuelo = vuelo;
 	}
 
+	
 }
